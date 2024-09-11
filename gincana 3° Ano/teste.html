@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gincana Estudantil - Sistema de Notas</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <style>
+
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f8f9fa;
+            margin-bottom: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #resumo {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gincana Estudantil</h1>
+        
+        <form id="form">
+            <label for="equipe"><b>Equipe:</b></label>
+            <select id="equipe" required>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+
+            <label for="prova"><b>Nome da Prova:</b></label>
+            <select id="prova" required>
+                <option value="prova1">Prova 1</option>
+                <option value="prova2">Prova 2</option>
+                <option value="prova3">Prova 3</option>
+                <option value="prova4">Prova 4</option>
+            </select>
+
+            <label for="nota1"><b>Nota do Jurado de 0 a 10:</b></label>
+            <input type="number" id="nota1" min="0" max="10" placeholder="Nota Jurado 1" required>
+            
+            <button type="submit">Adicionar Prova</button>
+        </form>
+
+        <h2>Provas Cadastradas</h2>
+        <ul id="provas-list"></ul>
+        
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
